@@ -1,0 +1,15 @@
+{
+  "name": "nr-groundskeeper-cli",
+  "version": "1.0.0",
+  "description": "CLI to list New Relic APM agents across your services",
+  "main": "./bin/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
+}
