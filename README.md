@@ -9,8 +9,6 @@ CLI application that analyzes APM applications in your New Relic account and gen
 
 ## Installation
 
-> The CLI requires [Node](). Ideally version 18  
-
 To install the application, follow these steps:
 
 1. Clone this repository to your local machine:
@@ -61,7 +59,7 @@ node . -k QWERTYUIOPASDFGHJKLZXCVBNM -a 123456789 -f out.csv -e err.log
 
 ## License
 
-This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under [Apache License 2.0](LICENSE).
 
 ## Issues and Contributions
 
