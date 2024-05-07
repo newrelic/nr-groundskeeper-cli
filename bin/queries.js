@@ -7,6 +7,7 @@ query EntitiesList($cursor: String) {
           ... on ApmApplicationEntityOutline {
             guid
             name
+            accountId
             language
             reporting
             runningAgentVersions {
