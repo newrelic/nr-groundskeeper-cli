@@ -180,13 +180,13 @@ const fetchRecommendations = async (query, entities = {}, progress) => {
     const csv = Object.keys(entities)
       .map((guid) => {
         const entity = entities[guid] || {};
-        const { name, language, reporting } = entity;
+        const { accountId, name, language, reporting } = entity;
         const runningAgentVersions = entity.runningAgentVersions || {};
         const minVersion = runningAgentVersions.minVersion || "";
         const maxVersion = runningAgentVersions.maxVersion || "";
         const recommendedVersion = recommendations?.[guid] || "";
         const note = makeNote(reporting, recommendedVersion);
-        return `${guid}, ${name}, ${language}, ${minVersion}, ${maxVersion}, ${recommendedVersion}, ${note}`;
+        return `${accountId}, ${guid}, ${name}, ${language}, ${minVersion}, ${maxVersion}, ${recommendedVersion}, ${note}`;
       })
       .join("\n");
     writeOutput(csv);
@@ -199,7 +199,7 @@ const fetchRecommendations = async (query, entities = {}, progress) => {
 const main = async () => {
   if (options.f && fs.existsSync(options.f)) await checkOverwrite();
   writeOutput(
-    `Entity guid, Entity name, Language, Min agent version, Max agent version, Recommended version, Notes`,
+    `Account ID, Entity guid, Entity name, Language, Min agent version, Max agent version, Recommended version, Notes`,
   );
   if (options.f) progressBar.print(1);
   await fetchEntitiesList(entitiesList);
