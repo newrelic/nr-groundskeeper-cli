@@ -1,6 +1,6 @@
 {
   "name": "nr-groundskeeper-cli",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "CLI to list New Relic APM agents across your services",
   "main": "./bin/index.js",
   "type": "module",
