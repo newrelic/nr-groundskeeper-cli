@@ -1,3 +1,5 @@
+[![New Relic Experimental Project header](https://github.com/newrelic/opensource-website/raw/master/src/images/categories/Experimental.png)](https://opensource.newrelic.com/oss-category/#new-relic-experimental)
+
 # Groundskeeper CLI
 
 CLI application that analyzes APM applications in your New Relic account and generates a CSV report with recommendations for out-of-date agents.
